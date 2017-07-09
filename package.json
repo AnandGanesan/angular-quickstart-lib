@@ -1,11 +1,11 @@
 {
-  "name": "quickstart-lib",
-  "version": "1.0.0",
-  "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
-  "main": "./bundles/quickstart-lib.umd.js",
-  "module": "./quickstart-lib.es5.js",
-  "es2015": "./quickstart-lib.js",
-  "typings": "./quickstart-lib.d.ts",
+  "name": "ag-input",
+  "version": "0.0.8",
+  "description": "ag-input",
+  "main": "./ag-input.umd.js",
+  "module": "./ag-input.es5.js",
+  "es2015": "./ag-input.js",
+  "typings": "./ag-input.d.ts",
   "author": "",
   "license": "MIT",
   "repository": {},
@@ -14,7 +14,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "clean": "rimraf out-tsc dist/*",
+    "clean": "rimraf out-tsc dist",
     "prebuild": "npm run clean",
     "build": "node build.js",
     "build-demo": "tsc -p src/demo/",
@@ -32,8 +32,7 @@
     "integration": "npm run integration:aot && npm run integration:jit",
     "integration:jit": "cd integration && npm run e2e",
     "integration:aot": "cd integration && npm run e2e:aot",
-    "lint": "tslint ./src/**/*.ts -t verbose",
-    "release": "standard-version"
+    "lint": "tslint ./src/**/*.ts -t verbose"
   },
   "peerDependencies": {
     "@angular/core": ">=4.0.0 <5.0.0 || >=4.0.0-beta <5.0.0"
@@ -64,7 +63,6 @@
     "rollup-plugin-sourcemaps": "^0.4.1",
     "rollup-plugin-uglify": "^2.0.1",
     "rxjs": "^5.0.1",
-    "standard-version": "^4.0.0",
     "systemjs": "^0.19.40",
     "tslint": "^4.4.2",
     "typescript": "~2.3.0",

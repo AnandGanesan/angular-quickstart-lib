@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { LibComponent } from './component/lib.component';
-import { LibService } from './service/lib.service';
+import {AgFaInputComponent} from "./ag-fa-input/ag-fa-input.component";
+import {InputRefDirective} from "./common/input-ref.directive";
+
 
 @NgModule({
-  declarations: [LibComponent],
-  providers: [LibService],
-  exports: [LibComponent]
+  declarations: [AgFaInputComponent, InputRefDirective],
+  imports: [
+    CommonModule
+  ],
+  exports: [AgFaInputComponent, InputRefDirective]
 })
-export class LibModule { }
+export class AgInputModule { }
+
+
